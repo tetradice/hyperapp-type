@@ -1,0 +1,17 @@
+{
+  "name": "hyperapp-typing",
+  "version": "0.1.0",
+  "repository": "https://github.com/tetradice/hyperapp-typing.git",
+  "typings": "index.d.ts",
+  "author": "Dice <tetradice@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dtslint": "dtslint"
+  },
+  "dependencies": {
+    "hyperapp": "https://github.com/tetradice/hyperapp#typescript-declarations-improvement"
+  },
+  "devDependencies": {
+    "dtslint": "^0.9.1"
+  }
+}
