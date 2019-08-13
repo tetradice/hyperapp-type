@@ -12,12 +12,12 @@ const Increment: Action<State, { value: number }> = (state, payload) => ({
 <input title="abc" oninput={Increment1}></input>;
 <input oninput={t(Increment1)}></input>;
 <input oninput={t(Increment1, { value: 1 })}></input>; // $ExpectError
-//<input oninput={t(Increment1, (e: Event) => ({ value: 1 }))}></input>; // $ExpectError
 
 <input oninput={t(Increment, { value: 100 })}></input>;
 <input oninput={t(Increment, ((e: Event) => ({ value: 100 })))}></input>;
-//<input oninput={t(Increment, ((e: Event) => ({ value: 100 })))}></input>; // $ExpectError
 <input oninput={t(Increment, { value: 'invalid' })}></input>; // $ExpectError
-<input oninput={t(Increment, ((e: number) => ({ value: 5 })))}></input>; // $ExpectError
 <input oninput={t(Increment, {})}></input>; // $ExpectError
-<input oninput={t(Increment1, (e: Event) => ({ value: 1 }))}></input>; // expected error but no error (return void function accept return value function)
+
+// expected error but no error 
+<input oninput={t(Increment, ((e: number) => ({ value: 5 })))}></input>; // cannot wrong default payload type
+<input oninput={t(Increment1, (e: Event) => ({ value: 1 }))}></input>; // return void function accept return value function
