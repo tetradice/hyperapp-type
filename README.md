@@ -21,6 +21,8 @@ This library exports the `t` function. `t` has a double meaning taken from the i
 Use the `t` function instead of a tuple when you want to pass arguments to the Action.
 
 ```tsx
+import { t } from "hyperapp-v2-typing";
+
 <button onclick={t(Increment, 1)}>+1</button>;   // [Increment, 1] => t(Increment, 1)
 <button onclick={t(Increment)}>+1</button>;      // Can be used without arguments
 ```
@@ -28,6 +30,8 @@ Use the `t` function instead of a tuple when you want to pass arguments to the A
 As a result, strict type checking is performed, and the following code that cannot be made into a build error with Hyperapp V2 alone can be made into a build error.
 
 ```tsx
+import { t } from "hyperapp-v2-typing";
+
 const Increment: Action<State, number> = (state, payload) => state - payload;
 
 // When written in tuple format, build errors do not occur even though the payload type is different.
