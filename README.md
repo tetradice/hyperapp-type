@@ -61,7 +61,7 @@ By using function calls, type inference is enabled and the above example can als
 Note: If there were a way to be as strict without a function call, this function would be completely unnecessary.
 
 ## Contact
-@tetradice ([GitHub Issues]() or [Twitter](https://twitter.com/tetradice))
+@tetradice ([GitHub Issues](https://github.com/tetradice/hyperapp-typing/issues) or [Twitter](https://twitter.com/tetradice))
 
 
 ## License
