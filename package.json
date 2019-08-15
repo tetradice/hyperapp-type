@@ -5,6 +5,11 @@
   "typings": "index.d.ts",
   "author": "Dice <tetradice@gmail.com>",
   "license": "UNLICENSED",
+  "files": [
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "dtslint": "dtslint"
   },

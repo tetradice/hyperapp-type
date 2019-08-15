@@ -1,5 +1,5 @@
 import { Action, h } from "hyperapp";
-import { t } from "hyperapp-typing";
+import { t } from "hyperapp-v2-typing";
 
 interface State { count: number }
 
