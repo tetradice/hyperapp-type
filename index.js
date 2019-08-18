@@ -1,7 +1,7 @@
-export var t = function(action, payload) {
-    if (payload === undefined) {
+export var t = function() {
+    if (arguments.length === 1) {
         return action;
     } else {
-        return [action, payload];
+        return Array.from(arguments);
     }
 }
