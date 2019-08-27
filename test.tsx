@@ -1,5 +1,5 @@
 import { Action, h } from "hyperapp";
-import { t } from "hyperapp-v2-typing";
+import { t, et, rt } from "hyperapp-v2-typing";
 
 interface State { count: number }
 
@@ -18,6 +18,6 @@ const Increment: Action<State, { value: number }> = (state, payload) => ({
 <input oninput={t(Increment, { value: 'invalid' })}></input>; // $ExpectError
 <input oninput={t(Increment, {})}></input>; // $ExpectError
 
-// expected error but no error 
+// expected error but no error
 <input oninput={t(Increment, ((e: number) => ({ value: 5 })))}></input>; // cannot wrong default payload type
 <input oninput={t(Increment1, (e: Event) => ({ value: 1 }))}></input>; // return void function accept return value function
